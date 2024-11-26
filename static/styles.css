@@ -83,7 +83,7 @@ span {
     margin-bottom: 10px;
     border-radius: 10px;
     align-self: flex-end;
-    max-width: 65%;
+    max-width: 85%;
     word-wrap: break-word;
 }
 
@@ -94,10 +94,9 @@ span {
     margin-bottom: 10px;
     border-radius: 10px;
     align-self: flex-start;
-    max-width: 65%;
+    max-width: 85%;
     word-wrap: break-word;
     user-select: text;
-    text-align: justify;
 }
 
 /* Input Styling */
