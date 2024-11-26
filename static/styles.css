@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Base Styling */
+* {
+    user-select: none;
+    -webkit-user-drag: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+/* Scrollbar Custom Styling */
+::-webkit-scrollbar {
+    width: 4px !important;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #a3a3a3 !important; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #000000 !important;
+}
+
+/* Parent Styling */
+body > div {
+    /* background-color: rgba(0, 0, 0, 0.047); */
+    background-color: rgba(186, 215, 243, 0.436);
+    border: 1px solid rgba(0, 0, 0, 0.241);
+    position: relative;
+    width: 50%;
+}
+
+/* Heading Styling */
+h1 {
+    font-family: "Bungee Shade" , sans-serif;
+}
+
+span {
+    font-family: sans-serif;
+}
+
+/* Loader Styling */
+.loader {
+    position: absolute;
+    width: 100px;
+    opacity: 65%;
+    aspect-ratio: 4;
+    --c:#000 90%,#0000;
+    background: 
+      radial-gradient(circle closest-side at left  6px top 50%,var(--c)),
+      radial-gradient(circle closest-side                     ,var(--c)),
+      radial-gradient(circle closest-side at right 6px top 50%,var(--c));
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    animation: dots 1s infinite alternate;
+  }
+  @keyframes dots {
+      to{width:25px;aspect-ratio: 1}
+  }
+
+/* Chatbot Styling */
+.mainChat {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    gap: 20px;
+}
+
+.mainChat p {
+    margin: 0;
+}
+
+/* User Message Styling */
+.userMessage {
+    background-color: rgba(17, 126, 243, 0.697);
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    align-self: flex-end;
+    max-width: 65%;
+    word-wrap: break-word;
+}
+
+/* Style the bot message */
+.botMessage {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    align-self: flex-start;
+    max-width: 65%;
+    word-wrap: break-word;
+    user-select: text;
+    text-align: justify;
+}
+
+/* Input Styling */
+#chat{
+    width: 100%;
+    outline: none;
+    background-color: #f4f2f2;
+    border: 1px solid grey;
+}
+
+#chat:focus, #chat:hover {
+    background-color: #ffffff;
+}
+
+#send {
+    background-color: rgba(17, 126, 243, 0.697);
+}
+
+#send:hover {
+    background-color: rgb(17, 126, 243);
+}
+
+/* Responsive Styling */
+@media (max-width: 850px) {
+    body > div {
+        width: 80% !important;
+    }
+}
