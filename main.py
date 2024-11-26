@@ -19,6 +19,10 @@ class ChatRequest(BaseModel):
 def read_root():
     return {"Hola": "Samvardha :)"}
 
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+
 #Chatbot Get Route
 @app.get("/chatbot", response_class=HTMLResponse)
 async def index_load():
